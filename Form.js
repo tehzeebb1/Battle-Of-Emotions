@@ -6,11 +6,13 @@ class Form
         this.button=createButton("Play"); 
         this.greeting=createElement('h3');
         this.reset=createButton("Reset");
+        this.rules=createElement("h3");
     }
     hide(){
         this.greeting.hide();
         this.button.hide();
         this.input.hide();
+        this.rules.hide();
       }
     display()
     {
@@ -23,7 +25,10 @@ class Form
         this.input.position(displayWidth/2-100,displayHeight/2-80);
 
         this.button.position(displayWidth/2+30,displayHeight/2);
-  
+
+        this.rules.position(displayWidth/2-200,displayHeight/2+20);
+        
+        this.rules.html("<p>CLICK ON RESET BEFORE GAME START(TOP RIGHT CORNER)</p><p>1. Register yourself.</p><p>2. Use ARROW Keys to move player</p><p>3. Save the player from touching wall and getting RESET</p> <p>4. Avoid eating a spitball of ANGER(ANGER is BAD)</p><p>5. Hurry can be slippery! Don't touch the ice monster!</p>")
         this.button.mousePressed(()=>{
             this.input.hide();
             this.button.hide();
@@ -35,6 +40,9 @@ class Form
             
             this.greeting.html("Hey! Welcome To The Battle of Emotions!: "+player.name);
             this.greeting.position(displayWidth/2-70,displayHeight/4);
+
+
+
         });
         
         
