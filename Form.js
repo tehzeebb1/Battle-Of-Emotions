@@ -16,11 +16,11 @@ class Form
     {
         var title=createElement('h2'); 
         title.html("Battle of Emotions");
-        title.position(displayWidth/2-50,0);
+        title.position(displayWidth/2-100,0);
 
         this.reset.position(displayWidth-100, 20);
        
-        this.input.position(displayWidth/2-40,displayHeight/2-80);
+        this.input.position(displayWidth/2-100,displayHeight/2-80);
 
         this.button.position(displayWidth/2+30,displayHeight/2);
   
@@ -32,8 +32,8 @@ class Form
             player.index=playerCount;
             player.update();
             player.updateCount(playerCount);
-
-            this.greeting.html("Welcome To The Game!:"+player.name);
+            
+            this.greeting.html("Hey! Welcome To The Battle of Emotions!: "+player.name);
             this.greeting.position(displayWidth/2-70,displayHeight/4);
         });
         

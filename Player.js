@@ -4,6 +4,10 @@ class Player
     {
         this.name=null;
         this.index=null;
+        this.playerY=250;
+        this.playerX=250;
+        this.confidence=0;
+        
     }
       getCount()
    {
@@ -17,12 +21,15 @@ class Player
        });
    }
 
-   update(){
+   update()
+   {
     var playerIndex="players/player"+this.index;
     database.ref(playerIndex).set({
         name:this.name,
+       playerY:this.playerY,
+       playerX:this.playerX,
+       confidence:this.confidence
     });
-
    }
    static getPlayerInfo(){
     var playerInfoRef = database.ref('players');
@@ -31,12 +38,14 @@ class Player
       })
 
    }
-
    playersGone()
    {
     var playerInfoRef = database.ref('players');
     playerInfoRef.remove();
    }
+
+   }
+
   
    
-}
+
