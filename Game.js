@@ -147,7 +147,7 @@ class Game
 
    play()
    {
-        background("black");
+        //background("black");
         form.hide();
        
          Player.getPlayerInfo();
@@ -212,7 +212,7 @@ class Game
     var reward = createSprite(600,120,40,10);
     reward.addAnimation("rewardCoin", rewardImg);
     reward.scale = 0.2;
-    reward.y = Math.round(random(100,1000));
+    reward.y = Math.round(random(100, 600));
     reward.x = Math.round(random(100, 1000));
   
    
